@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.venv" />
-      <excludeFolder url="file://$MODULE_DIR$/.venv/bin" />
-      <excludeFolder url="file://$MODULE_DIR$/.venv/include" />
-      <excludeFolder url="file://$MODULE_DIR$/.venv/lib" />
+    <content url="file://$MODULE_DIR$/../Learning-Django_1">
+      <excludeFolder url="file://$MODULE_DIR$/../Learning-Django_1/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/../Learning-Django_1/.venv/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../Learning-Django_1/.venv/include" />
+      <excludeFolder url="file://$MODULE_DIR$/../Learning-Django_1/.venv/lib" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.13" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
