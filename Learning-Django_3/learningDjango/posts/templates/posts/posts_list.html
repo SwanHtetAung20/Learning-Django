@@ -5,5 +5,21 @@ Home
 {% endblock %}
 
 {% block content %}
-<h1>Posts List </h1>
+ <section>
+     <h1>Posts List </h1>
+       <article>
+            <ul class="list-group">
+            {% for post in posts %}
+                <li>
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.body }}</p>
+                    <p><a href="#">{{ post.slug }}</a></p>
+                    <p>Created at: {{ post.created_at }}</p>
+                </li>
+            {% empty %}
+                <li>No posts available.</li>
+            {% endfor %}
+            </ul>
+       </article>
+ </section>
 {% endblock %}
