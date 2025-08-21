@@ -5,21 +5,24 @@ Home
 {% endblock %}
 
 {% block content %}
- <section>
-     <h1>Posts List </h1>
-       <article>
-            <ul class="list-group">
+<section>
+    <h1>Posts List </h1>
+    <article>
+        <ul class="list-group">
             {% for post in posts %}
-                <li>
-                    <h2>{{ post.title }}</h2>
-                    <p>{{ post.body }}</p>
-                    <p><a href="#">{{ post.slug }}</a></p>
-                    <p>Created at: {{ post.created_at }}</p>
-                </li>
+            <li>
+                <h2>
+                    <a href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }}
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p>{{ post.body }}</p>
+                <p>Created at: {{ post.created_at }}</p>
+            </li>
             {% empty %}
-                <li>No posts available.</li>
+            <li>No posts available.</li>
             {% endfor %}
-            </ul>
-       </article>
- </section>
+        </ul>
+    </article>
+</section>
 {% endblock %}
