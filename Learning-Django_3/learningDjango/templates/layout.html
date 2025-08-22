@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-        {% block title %}My Django Site{% endblock %}
-    </title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}My Django Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/main.js' %}" defer></script>
-</head>
-<body>
-<nav>
-    <ul>
+  </head>
+  <body>
+    <nav>
+      <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="{% url 'posts:list'  %}">Posts</a></li>
-    </ul>
-</nav>
-<main>
-    {% block content %}
-    {% endblock %}
-</main>
-</body>
+        <li><a href="{% url 'users:register' %}">Register</a></li>
+      </ul>
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+  </body>
 </html>
