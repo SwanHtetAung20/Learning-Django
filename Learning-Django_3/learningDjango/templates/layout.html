@@ -13,8 +13,18 @@
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="{% url 'posts:list'  %}">Posts</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'posts:new-post' %}">New Post</a></li>
+        <li>
+          <form action="{% url 'users:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+        </li>
+        {% else %}
         <li><a href="{% url 'users:register' %}">Register</a></li>
         <li><a href="{% url 'users:login' %}">Login</a></li>
+        {% endif %}
       </ul>
     </nav>
     <main>{% block content %} {% endblock %}</main>
