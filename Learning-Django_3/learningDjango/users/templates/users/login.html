@@ -1,0 +1,10 @@
+{% extends 'layout.html' %} {% block title %} User - Login {% endblock %}
+{% block content %}
+<section>
+  <h1>User Login</h1>
+  <form action="{% url 'users:login' %}" method="post">
+    {% csrf_token %} {{ form }}
+    <button type="submit">Login</button>
+  </form>
+</section>
+{% endblock %}
